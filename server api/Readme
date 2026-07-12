@@ -1,0 +1,40 @@
+# Mini Backend
+
+The smallest possible backend — two JSON endpoints.
+
+## Run it
+
+```bash
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+
+Server starts at `http://127.0.0.1:8000`
+
+## Test it
+
+**In your browser**, visit:
+- http://127.0.0.1:8000/
+- http://127.0.0.1:8000/status
+
+**With curl:**
+```bash
+curl http://127.0.0.1:8000/
+curl http://127.0.0.1:8000/status
+```
+
+## Publish to GitHub
+
+```bash
+git init
+git add .
+git commit -m "Minimal FastAPI backend with two JSON endpoints"
+gh repo create mini-backend --public --source=. --push
+```
+
+(If you don't have the `gh` CLI, create an empty repo on github.com instead, then run:)
+```bash
+git remote add origin https://github.com/<your-username>/mini-backend.git
+git branch -M main
+git push -u origin main
+```
